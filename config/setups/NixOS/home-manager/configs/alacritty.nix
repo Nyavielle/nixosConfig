@@ -4,22 +4,22 @@
     size = 14.0
 
     [font.normal]
-    family = "DepartureMono Nerd Font"
+    family = "FiraCode Nerd Font"
     style = "Regular"
     
     [font.bold]
-    family = "DepartureMono Nerd Font"
+    family = "FiraCode Nerd Font"
     style = "Bold"
     
     [font.italic]
-    family = "DepartureMono Nerd Font"
+    family = "FiraCode Nerd Font"
     style = "Italic"
     
     [font.bold_italic]
-    family = "DepartureMono Nerd Font"
+    family = "FiraCode Nerd Font"
     style = "Bold Italic"
 
-    [colors.primaty]
+    [colors.primary]
     background = "#000000"
     foreground = "#00FF00"
 

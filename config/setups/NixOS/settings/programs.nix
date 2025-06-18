@@ -1,5 +1,9 @@
 {
-  programs.hyprland.enable = true;
+  programs.hyprland = {
+    enable = true;
+    withUWSM = true;
+    xwayland.enable = true;
+  };
 
   programs.starship.enable = true;
 
@@ -7,7 +11,6 @@
     enable = true;
     shellInit = ''
       eval "$(starship init zsh)"
-      [[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec Hyprland
     '';
   };
 }

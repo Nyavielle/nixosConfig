@@ -22,7 +22,7 @@
     setups = [
       {
         user = "Nyavielle";
-        setupname = "nixos";
+        setupname = "NixOS";
         timezone = "Europe/Kyiv";
         system = "x86_64-linux";
         stateVersion = "25.05";

@@ -39,7 +39,7 @@
     }
 
     animations {
-    enabled = false
+      enabled = false
     }
 
     workspace = w[tv1], gapsout:0, gapsin:0
@@ -50,7 +50,6 @@
     windowrule = rounding 0, floating:0, onworkspace:f[1]
 
     dwindle {
-      pseudotitle = false
       preserve_split = true
     }
 
