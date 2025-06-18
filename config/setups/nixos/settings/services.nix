@@ -3,7 +3,7 @@
   # Audio
   services.pipewire = {
     enable = true;
-    alsa.eanble = true;
+    alsa.enable = true;
     alsa.support32Bit = true;
     pulse.enable = true;
     jack.enable = true;
