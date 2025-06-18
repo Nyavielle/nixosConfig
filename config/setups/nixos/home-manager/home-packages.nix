@@ -23,6 +23,7 @@
     neofetch
     neovim
     ranger
+    starship
     unzip
     wget
     yt-dlp

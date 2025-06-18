@@ -21,7 +21,7 @@
   let
     setups = [
       {
-        user = "nyavielle";
+        user = "Nyavielle";
         setupname = "nixos";
         timezone = "Europe/Kyiv";
         system = "x86_64-linux";
