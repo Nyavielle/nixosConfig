@@ -34,7 +34,7 @@
       system = system;
       
       specialArgs = {
-        inherit inputs setname user timezone system stateVersion;
+        inherit inputs setupname user timezone system stateVersion;
       };
       
       modules = [
