@@ -38,7 +38,7 @@
       };
       
       modules = [
-        ./setups/${setupname}/configuration.nix
+        ./setups/${setupname}/settings
 
         home-manager.nixosModules.home-manager
         {
