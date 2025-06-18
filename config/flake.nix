@@ -38,7 +38,7 @@
       };
       
       modules = [
-        ./setups/${setname}/settings
+        ./setups/${setupname}/settings
 
         home-manager.nixosModules.home-manager
         {
@@ -47,7 +47,7 @@
             useUserPackages = true;
             users.${user} = ./setups/${setupname}/home-manager/home.nix;
             extraSpecialArgs = {
-              inherit inputs setupname user timezone system stateVersion;
+              inherit inputs setupname user timezone stateVersion;
             };
           };
         }
@@ -57,7 +57,7 @@
   {
     nixosConfigurations = nixpkgs.lib.foldl' (configs: setup:
     configs // {
-      "${setup.setupname}" = makeSystem {
+      "${setup.setupname}" = makeSetup {
         inherit inputs setupname user timezone system stateVersion;
       };
     }) {} setups;

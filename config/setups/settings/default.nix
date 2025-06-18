@@ -1,6 +1,7 @@
 {
   imports = [
     ./boot.nix
+    ./hardware-configuration.nix
     ./network.nix
     ./nixpkgs.nix
     ./programs.nix
