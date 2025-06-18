@@ -1,5 +1,9 @@
 {
-  programs.hyprland.enable = true;
+  programs.hyprland = {
+    eanble = true;
+    withUWSM = true;
+    xwayland.enable = true;
+  };
 
   programs.hyprland.enable = true;
 
