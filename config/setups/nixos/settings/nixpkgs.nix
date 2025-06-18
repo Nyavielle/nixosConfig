@@ -1,4 +1,4 @@
 {
-  nix.settings.experimental-features = [ "nix-community" "flakes" ];
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nixpkgs.config.allowUnfree = true;
 }

@@ -1,6 +1,6 @@
 {
   home.file.".config/starship.toml".text = ''
-    add_newline = true;
+    add_newline = true
 
     format = "$username@$hostname: $directory$git_branch\n$character"
 

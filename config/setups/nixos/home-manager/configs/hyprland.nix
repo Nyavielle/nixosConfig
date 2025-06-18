@@ -1,5 +1,5 @@
 {
-  home.file.".config/hypr/hyprland.conf" = ''
+  home.file.".config/hypr/hyprland.conf".text = ''
     monitor = , preferred, auto, 1
 
     env = XCURSOR_SIZE, 24
