@@ -38,7 +38,7 @@
       };
       
       modules = [
-        ./setups/${setupname}/settings
+        ./setups/${setupname}/configuration.nix
 
         home-manager.nixosModules.home-manager
         {
@@ -58,7 +58,7 @@
     nixosConfigurations = nixpkgs.lib.foldl' (configs: setup:
     configs // {
       "${setup.setupname}" = makeSetup {
-        inherit inputs setupname user timezone system stateVersion;
+        inherit (setup) setupname user timezone system stateVersion;
       };
     }) {} setups;
   };
