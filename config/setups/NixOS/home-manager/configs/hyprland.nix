@@ -124,7 +124,7 @@
     bindl = , XF86AudioPlay, exec, playerctl play-pause
     bindl = , XF86AudioPrev, exec, playerctl previous
 
-    bind = , print, exec, grim ~/Pictures/screenshots/screenshot_$(date '+%d.%m.%Y_%H:%M:%S').jpg
-    bind = super, print, exec, grim -g "$(slurp)" ~/Pictures/screenshots/screenshot_$(date '+%d.%m.%Y_%H:%M:%S').jpg
+    bind = , print, exec, grim ~/Pictures/screenshots/screenshot_$(date '+%d.%m.%Y_%H:%M:%S').png
+    bind = super, print, exec, grim -g "$(slurp)" ~/Pictures/screenshots/screenshot_$(date '+%d.%m.%Y_%H:%M:%S').png
   '';
 }
