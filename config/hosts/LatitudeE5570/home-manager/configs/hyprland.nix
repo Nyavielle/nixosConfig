@@ -53,8 +53,8 @@
     
     windowrulev2 = float, class:firefox, title:Picture-in-Picture
     windowrulev2 = pin,class:^(firefox)$,title:^(Picture-in-Picture)$
-    windowrulev2 = size 26% 26%, class:firefox, title:Picture-in-Picture
-    windowrulev2 = move 74% 74%, class:firefox, title:Picture-in-Picture
+    windowrulev2 = size 27% 27%, class:firefox, title:Picture-in-Picture
+    windowrulev2 = move 73% 73%, class:firefox, title:Picture-in-Picture
 
 
     dwindle {
