@@ -5,13 +5,13 @@
     # Desktop programs
     alacritty
     bitwarden-desktop
+    discord
     firefox
     mpv
     obsidian
     spotify
     steam
     telegram-desktop
-    vesktop
     zathura
 
     # Terminal utils
