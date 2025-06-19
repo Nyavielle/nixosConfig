@@ -62,7 +62,7 @@
       kb_layout = us,ua
       kb_options = grp:caps_toggle
       follow_mouse = 1
-      sensitivity = -0.75
+      sensitivity = -0.80
     }
 
     bind = super, return, exec, alacritty

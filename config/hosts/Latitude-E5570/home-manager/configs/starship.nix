@@ -1,9 +1,9 @@
-{ user, setupname, ... }:
+{ user, hostname, ... }:
 {
   home.file.".config/starship.toml".text = ''
     add_newline = true
 
-    format = "${user}@${setupname}: $directory$git_branch\n$character"
+    format = "${user}@${hostname}: $directory$git_branch\n$character"
 
     [directory]
     truncation_length = 0

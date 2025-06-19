@@ -22,7 +22,7 @@
     hosts = [
       {
         user = "Nyavielle";
-        hostname = "NixOS";
+        hostname = "Latitude-E5570";
         timezone = "Europe/Kyiv";
         system = "x86_64-linux";
         stateVersion = "25.05";
