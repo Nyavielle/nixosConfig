@@ -18,6 +18,8 @@
 
       no_focus_fallback = true
 
+      no_border_on_floating = true
+
       allow_tearing = true
 
       layout = dwindle
@@ -48,6 +50,12 @@
     windowrule = rounding 0, floating:0, onworkspace:w[tv1]
     windowrule = bordersize 0, floating:0, onworkspace:f[1]
     windowrule = rounding 0, floating:0, onworkspace:f[1]
+    
+    windowrulev2 = float, class:firefox, title:Picture-in-Picture
+    windowrulev2 = pin,class:^(firefox)$,title:^(Picture-in-Picture)$
+    windowrulev2 = size 26% 26%, class:firefox, title:Picture-in-Picture
+    windowrulev2 = move 74% 74%, class:firefox, title:Picture-in-Picture
+
 
     dwindle {
       preserve_split = true
