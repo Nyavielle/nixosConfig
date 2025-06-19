@@ -10,4 +10,9 @@
     memoryPercent = 100;
     priority = 999;
   };
+
+  environment.sessionVariables = rec {
+    TERMINAL = "alacritty";
+    EDITOR = "nvim";
+  };
 }

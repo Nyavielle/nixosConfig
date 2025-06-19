@@ -24,6 +24,7 @@
     neovim
     ranger
     starship
+    tree
     unzip
     wget
     yt-dlp

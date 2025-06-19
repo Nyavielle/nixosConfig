@@ -1,5 +1,5 @@
 {
-  description = "NixOS config for single user with different setups";
+  description = "NixOS config";
 
   inputs = {
     nixpkgs = {
