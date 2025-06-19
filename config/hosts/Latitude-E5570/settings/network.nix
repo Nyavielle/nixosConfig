@@ -1,7 +1,7 @@
-{ setupname, ... }:
+{ hostname, ... }:
 {
   # Setup name
-  networking.hostName = setupname;
+  networking.hostName = hostname;
 
   # Network Manager
   networking.wireless.iwd.enable = true;

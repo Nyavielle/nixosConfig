@@ -19,35 +19,35 @@
 
   outputs = { self, nixpkgs, home-manager, stylix, ... } @inputs:
   let
-    setups = [
+    hosts = [
       {
         user = "Nyavielle";
-        setupname = "NixOS";
+        hostname = "NixOS";
         timezone = "Europe/Kyiv";
         system = "x86_64-linux";
         stateVersion = "25.05";
       }
     ];
 
-    makeSetup = { setupname, user, timezone, system, stateVersion }: nixpkgs.lib.nixosSystem
+    makeSystem = { hostname, user, timezone, system, stateVersion }: nixpkgs.lib.nixosSystem
     {
       system = system;
       
       specialArgs = {
-        inherit inputs setupname user timezone system stateVersion;
+        inherit inputs hostname user timezone system stateVersion;
       };
       
       modules = [
-        ./setups/${setupname}/settings
+        ./hosts/${hostname}/settings
 
         home-manager.nixosModules.home-manager
         {
           home-manager = {
             useGlobalPkgs = true;
             useUserPackages = true;
-            users.${user} = ./setups/${setupname}/home-manager/home.nix;
+            users.${user} = ./hosts/${hostname}/home-manager/home.nix;
             extraSpecialArgs = {
-              inherit inputs setupname user timezone stateVersion;
+              inherit inputs hostname user timezone stateVersion;
             };
           };
         }
@@ -55,11 +55,11 @@
     };
   in
   {
-    nixosConfigurations = nixpkgs.lib.foldl' (configs: setup:
+    nixosConfigurations = nixpkgs.lib.foldl' (configs: host:
     configs // {
-      "${setup.setupname}" = makeSetup {
-        inherit (setup) setupname user timezone system stateVersion;
+      "${host.hostname}" = makeSystem {
+        inherit (host) hostname user timezone system stateVersion;
       };
-    }) {} setups;
+    }) {} hosts;
   };
 }
