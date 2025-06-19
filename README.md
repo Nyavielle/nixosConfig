@@ -18,9 +18,9 @@ It's designed for a smooth daily workflow:
 ```bash
 git clone https://github.com/Nyavielle/nixosConfig
 cd nixosConfig/config
-rm -rf ./setups/NixOS/settings/hardware-configuration.nix
-sudo cp /etc/nixos/hardware-configuration.nix ./setups/NixOS/settings/hardware-configuration.nix
-sudo nixos-rebuild switch --flake .#NixOS
+rm -rf ./setups/LatitudeE5570/settings/hardware-configuration.nix
+sudo cp /etc/nixos/hardware-configuration.nix ./setups/LatitudeE5570/settings/hardware-configuration.nix
+sudo nixos-rebuild switch --flake .#LatitudeE5570
 reboot
 ```
 
@@ -29,10 +29,10 @@ reboot
 sudo -i
 git clone https://github.com/Nyavielle/nixosConfig
 cd nixosConfig/config
-sudo nix --experimental-features "nix-command flakes" run github:nix-community/disko/latest -- --mode destroy,format,mount ./setups/NixOS/settings/disko.nix
+sudo nix --experimental-features "nix-command flakes" run github:nix-community/disko/latest -- --mode destroy,format,mount ./setups/LatitudeE5570/settings/disko.nix
 sudo nixos-generate-config --root /mnt
-rm -rf ./setups/NixOS/settings/hardware-configuration.nix
-sudo cp /mnt/etc/nixos/hardware-configuration.nix ./setups/NixOS/settings/hardware-configuration.nix
-sudo nixos-install --flake .#NixOS
+rm -rf ./setups/LatitudeE5570/settings/hardware-configuration.nix
+sudo cp /mnt/etc/nixos/hardware-configuration.nix ./setups/LatitudeE5570/settings/hardware-configuration.nix
+sudo nixos-install --flake .#LatitudeE5570
 reboot
 ```

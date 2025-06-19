@@ -93,7 +93,7 @@
     bind = super, 7, workspace, 7
     bind = super, 8, workspace, 8
     bind = super, 9, workspace, 9
-    bind = super, 10, workspace, 10
+    bind = super, 0, workspace, 10
 
     bind = super shift, 1, movetoworkspace, 1
     bind = super shift, 2, movetoworkspace, 2
@@ -104,7 +104,7 @@
     bind = super shift, 7, movetoworkspace, 7
     bind = super shift, 8, movetoworkspace, 8
     bind = super shift, 9, movetoworkspace, 9
-    bind = super shift, 10, movetoworkspace, 10
+    bind = super shift, 0, movetoworkspace, 10
 
     bind = super, mouse_down, workspace, e+1
     bind = super, mouse_up, workspace, e-1
