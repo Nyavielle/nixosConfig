@@ -4,11 +4,12 @@
   networking.hostName = hostname;
 
   # Network Manager
-  networking.wireless.iwd.enable = true;
+  networking.networkmanager.enable = true;
+  networking.wireless.iwd.enable = false;
 
   # DNS
   services.resolved = {
-    enable = true;
+    enable = false;
     extraConfig = ''
       DNS=1.1.1.1 1.0.0.1
       FallbackDNS=9.9.9.9
@@ -25,10 +26,29 @@
 
   # Firewall
   networking.firewall = {
-    enable = true;
-    allowedTCPPorts = [ 22 ];
-    allowedUDPPorts = [];
+    enable = false;
+    allowedTCPPorts = [ 5555 80 443 ];
+    allowedUDPPorts = [ 53 67 68 ];
     allowPing = false;
     checkReversePath = true;
+  };
+
+  # nftables
+  networking.nftables = {
+    enable = false;
+    ruleset = ''
+      table ip nat {
+        chain POSTROUTING {
+          type nat hook postrouting priority 100;
+          oifname "wlan0" masquerade;
+        }
+      }
+      table ip filter {
+        chain FORWARD {
+          iifname "waydroid0" oifname "wlan0" accept;
+          iifname "wlan0" oifname "waydroid0" ct state related,established accept;
+        }
+      }
+    '';
   };
 }
