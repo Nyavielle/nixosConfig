@@ -41,5 +41,12 @@
     slurp
     waybar
     wofi
+
+    # Compilers
+    python3Full
+    clang
+    cargo
+    nodejs
+    openjdk21
   ];
 }
